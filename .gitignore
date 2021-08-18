@@ -2,3 +2,4 @@ node_modules
 build
 app/node_modules
 secret
+.DS_Store
