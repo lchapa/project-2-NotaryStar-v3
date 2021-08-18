@@ -226,4 +226,5 @@ it('lookUptokenIdStarInfo not existing star', async() =>{
     } catch(error){
         assert.isOk(error, 'Error for non existing token');
     }
+    
 });
