@@ -60,6 +60,5 @@ window.addEventListener("load", async function() {
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
     App.web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:9545"),);
   }
-
   App.start();
 });
