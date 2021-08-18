@@ -1,5 +1,5 @@
 node_modules
 build
 app/node_modules
-secret
+.secret
 .DS_Store

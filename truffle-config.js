@@ -18,11 +18,9 @@
  *
  */
 
-// const HDWallet = require('truffle-hdwallet-provider');
-// const infuraKey = "fj4jll3k.....";
-//
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+ const HDWalletProvider = require('@truffle/hdwallet-provider');
+ const fs = require('fs');
+ const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
   /**
@@ -60,13 +58,9 @@ module.exports = {
      }, //truffle migrate --reset --network ganache
 
     rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/147f620e8c88496d858af47af12fbde6`),
-        network_id: 4,       // rinkeby's id
-        gas: 4500000,        // rinkeby has a lower block limit than mainnet
-        gasPrice: 10000000000
-      // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-      // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+      // must be a thunk, otherwise truffle commands may hang in CI
+      provider: () => new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/8d9ba0d42a024ca88c6f29723ff61446"),
+      network_id: 4,
     }, //truffle migrate --reset --network rinkeby
 
 
