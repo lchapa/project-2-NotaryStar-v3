@@ -2,8 +2,8 @@
 StarNotary DApp - Added Features - Udacity Blockchain Developer Nanodegree
 
 
-OpenZeppelin Version:     "@openzeppelin/contracts": "^4.2.0". 
-Truffle Version:          "@truffle/hdwallet-provider": "^1.4.3". 
+OpenZeppelin Version:     "@openzeppelin/contracts": "^4.2.0"   
+Truffle Version:          "@truffle/hdwallet-provider": "^1.4.3"   
 
 
 ERC-721 Token Name:       "StarNotary". 
